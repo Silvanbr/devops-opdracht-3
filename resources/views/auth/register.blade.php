@@ -43,8 +43,12 @@
         </div>
     </div>
 </nav>
-<form method="POST" action="{{ url('/login') }}">
+<form method="POST" action="{{ route('register') }}">
     @csrf
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
     <div>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
@@ -54,14 +58,13 @@
         <input type="password" id="password" name="password" required>
     </div>
     <div>
-        <input type="checkbox" id="remember" name="remember">
-        <label for="remember">Onthoud mij</label>
+        <label for="password_confirmation">Confirm Password</label>
+        <input type="password" id="password_confirmation" name="password_confirmation" required>
     </div>
     <div>
-        <button class="button" type="submit">Login</button>
+        <button class="button" type="submit">Register</button>
     </div>
 </form>
-
 {{-- Footer --}}
 <footer class="footer">
     <div class="container">

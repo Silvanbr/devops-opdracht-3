@@ -17,7 +17,7 @@ class BarController extends Controller
         $bars = Bar::with('user')->paginate(4);
         return view("bars.index", [
             "bars" => $bars
-        ])->middleware("auth");
+        ]);
     }
 
     /**

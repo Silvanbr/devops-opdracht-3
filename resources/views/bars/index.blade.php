@@ -8,6 +8,10 @@
                 <a href="{{ route('bars.create') }}" class="button is-primary is-pulled-right">
                     Add Bar
                 </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit">log out</button>
+                </form>
             </div>
         </div>
         @foreach($bars as $bar)
