@@ -16,11 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->text("waldo")->nullable();
             $table->double("grault")->default(2.71828);
-            $table->unsignedBigInteger("dolor");
-            $table->foreign("dolor")
-                ->references("id")
-                ->on("users")
-                ->onDelete("cascade");
+            $table->unsignedBigInteger("dolor")->default(0);
             $table->timestamps();
         });
     }
