@@ -35,7 +35,6 @@
                     </div>
                 </div>
             </article>
-              {{$bar->user->name}}
         @endforeach
         {{$bars->links()}}
 
